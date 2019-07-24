@@ -2,9 +2,9 @@
   "name": "Puteam-BookClub",
   "version": "1.0.0",
   "description": "A search engine for book reviews",
-  "main": "index.js",
+  "main": "test.js",
   "scripts": {
-    "test": "node test.js | tap-spec"
+    "test":    "test": "node test.js | tap-spec",
   },
   "repository": {
     "type": "git",
