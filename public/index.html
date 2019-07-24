@@ -1,15 +1,29 @@
-<!DOCTYPE html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Movie Search</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <h1>Movie Search Engine</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-        <script src="./script.js" async defer></script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Movie Search</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>Movie Search Engine</h1>
+
+  <form class="form" action="/" method="post">
+    <label for="search-input">Look up movie title:
+      <br>
+      <input class="form--input" type="text">
+    </label>
+    <label for="submit">
+      <button class="form--button" type="submit">Submit</button>
+    </label>
+  </form>
+
+  <script src="./script.js" async defer></script>
+</body>
+
 </html>
