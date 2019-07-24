@@ -1,13 +1,13 @@
 const fs = require("fs");
 const path = require("path");
+const handlers = require("./handlers")
 
 
 const router =  (request, response) => {
   const endpoint = request.url;
 
   if (endpoint === '/') {
-    response.writeHead();
-    response.end('');
+    handlers.handleHome(request, response);
 
   } else if () {
     response.writeHead();
