@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const handlers = require("./handlers")
+const handlers = require("./handler")
 
 
 const router =  (request, response) => {
