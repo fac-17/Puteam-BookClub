@@ -15,4 +15,17 @@ const handleHome = (request, response) => {
   });
 };
 
+
+const handlePublic = (request, response, endpoint) => {
+  const extension = path.extname(endpoint);
+
+  const extensionType = {
+    ".css" : "text/css",
+    ".js"  : "application/javascript",
+    ".ico" : "image/x-icon"
+  };
+
+  
+}
+
 module.exports = { handleHome };
