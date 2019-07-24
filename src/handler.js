@@ -25,7 +25,17 @@ const handlePublic = (request, response, endpoint) => {
     ".ico" : "image/x-icon"
   };
 
-  
+  const filePath = path.join(__dirname, "..", "public", endpoint);
+
+  fs.readFile(filePath, (error, file) => {
+    if (error) {
+      response.writeHead(404, {"content-type": "text/html"});
+      response.end("<h1>Ooppppsssss, page ain't found</h1>")
+    } else {
+      response.writeHead(200, {"content-type": extensionType[extension]});
+      response.end(file);
+    }
+  });
 }
 
-module.exports = { handleHome };
+module.exports = { handleHome, handlePublic };
