@@ -1,11 +1,11 @@
-// let script = require("./script.js");
-// let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+// let script = require("../public/script.js");
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-let searchInput = "lion"; //placeholder
+var searchInput = "lion"; //placeholder
 
-//let key = process.env.API_KEY;
+// var key = process.env.API_KEY;
 
-var key = ' NO KEY NO KEY NO KEY ';
+var key = '3a9c38adfc4ba4d10d8d9b90443f949d';
 
 
 function apiCall(searchInput) {
