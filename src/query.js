@@ -5,7 +5,7 @@ var searchInput = "lion"; //placeholder
 
 // var key = process.env.API_KEY;
 
-var key = '3a9c38adfc4ba4d10d8d9b90443f949d';
+
 
 
 function apiCall(searchInput) {
