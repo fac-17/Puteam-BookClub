@@ -8,10 +8,7 @@ var key = process.env.API_KEY;
 
 function apiCall(inputValue) {
   var url =
-    "https://api.themoviedb.org/3/search/movie?api_key=" +
-    key +
-    "&query=" +
-    inputValue;
+    "https://api.themoviedb.org/3/search/movie?api_key=" + key + inputValue;
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -21,6 +18,6 @@ function apiCall(inputValue) {
   };
   xhr.open("GET", url, true);
   xhr.send();
-};
+}
 
-module.exports = { apiCall }
+module.exports = { apiCall };
