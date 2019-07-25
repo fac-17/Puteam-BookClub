@@ -1,0 +1,39 @@
+body {
+  max-width: 600px;
+  text-align: center;
+  background-color: #cf3b1d;
+  color: #2f2323;
+}
+
+
+h1 {
+  font-family: 'Limelight', cursive;
+  font-weight: 100;
+}
+
+.form {
+  font-family: 'Limelight', cursive;
+  font-size: 1.3em;
+  color: #2f2323;
+}
+
+
+.form--input {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px black solid;
+  font-family: 'Limelight', cursive;
+  font-size: 1em;
+  background-color: #d9d1c7;
+}
+
+.form--button {
+  width: 80px;
+  height: 45px;
+  font-family: 'Limelight', cursive;
+  border-radius: 20px;
+  border: 2px black solid;
+  background-color: #d9d1c7;
+  font-size: 0.7em;
+}
