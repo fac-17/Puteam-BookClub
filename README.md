@@ -1,2 +1,2 @@
-# Puteam's Book Club
-A search engine for book reviews
+# Puteam's Movie Club
+A search engine for movie reviews
