@@ -1,7 +1,6 @@
 let input = document.querySelector(".form--input");
 let xhr = new XMLHttpRequest();
-let url = "/search=lion"
-// ${input.value}`;
+let url = `search=${input.value}`;
 
 const frontCall = () => {
 xhr.onreadystatechange = () => {
@@ -10,7 +9,7 @@ xhr.onreadystatechange = () => {
   } else {
     console.error(xhr.responseText);
   }
-  
+
   }
   xhr.open("GET", url, true);
   xhr.send();
