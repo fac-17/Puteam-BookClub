@@ -1,10 +1,16 @@
 body {
   max-width: 600px;
+  margin: auto;
   text-align: center;
   background-color: #cf3b1d;
   color: #2f2323;
 }
 
+.camera-picture {
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
 
 h1 {
   font-family: 'Limelight', cursive;
@@ -15,6 +21,7 @@ h1 {
   font-family: 'Limelight', cursive;
   font-size: 1.3em;
   color: #2f2323;
+
 }
 
 
@@ -26,7 +33,10 @@ h1 {
   font-family: 'Limelight', cursive;
   font-size: 1em;
   background-color: #d9d1c7;
+
+  margin: 0px auto 20px auto;
 }
+
 
 .form--button {
   width: 80px;
@@ -36,4 +46,33 @@ h1 {
   border: 2px black solid;
   background-color: #d9d1c7;
   font-size: 0.7em;
+
+  /* changes made for autocomplete */
+  display: none;
+  position: fixed;
+  bottom: 10px;
+
+}
+
+
+
+.autocomplete {
+    margin-bottom: 20px;
+}
+
+.autocomplete-items {
+  margin: 5px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px black solid;
+  font-family: 'Limelight', cursive;
+  font-size: 1em;
+  background-color: #d9d1c7;
+  cursor: pointer;
+
 }

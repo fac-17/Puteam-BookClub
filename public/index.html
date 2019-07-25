@@ -11,19 +11,27 @@
   </head>
 
   <body>
+    <img class="camera-picture" src="img/camera.png" alt="Pseudo vintage of a camera looking suave">
     <h1>Movie Search Engine</h1>
 
     <form class="form" action="/" method="post">
+
       <label for="search-input"
         >Look up movie title:
         <br/>
         <br/>
-        <input class="form--input" type="text" value="" />
+        <div class="autocomplete">
+          <input class="form--input" type="text" value="" />
+        </div>
       </label>
+
       <label for="submit">
         <button class="form--button" type="submit">Submit</button>
       </label>
+
     </form>
+
+
 
     <script src="./script.js" async defer></script>
     <script src="./call.js"></script>
