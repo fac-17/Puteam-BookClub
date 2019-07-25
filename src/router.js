@@ -7,12 +7,19 @@ const router =  (request, response) => {
   const endpoint = request.url;
 
   if (endpoint === '/') {
+
     handlers.handleHome(request, response);
 
-  } else if (endpoint.indexOf('public') !== -1) {
+  } else if (endpoint.includes('public')) {
+
   handlers.handlePublic(request, response, endpoint);
 
-  } else {
+} else if (endpoint.includes("search")) {
+  console.log("This is search endpoint", endpoint);
+  //handlers.handleCall(request, response);
+
+
+} else {
     response.writeHead(404);
     response.end('404 Page not found');
   }
