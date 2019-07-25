@@ -15,9 +15,8 @@ const router =  (request, response) => {
   handlers.handlePublic(request, response, endpoint);
 
 } else if (endpoint.includes("search")) {
-  console.log("This is search endpoint", endpoint);
-  //handlers.handleCall(request, response);
-
+  console.log("This is search endpoint: ", endpoint);
+  handlers.handleCall(request, response, endpoint);
 
 } else {
     response.writeHead(404);
