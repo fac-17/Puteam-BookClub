@@ -8,7 +8,11 @@ var key = process.env.API_KEY;
 
 function apiCall(inputValue) {
   var url =
-    "https://api.themoviedb.org/3/search/movie?api_key=" + key + inputValue;
+    "https://api.themoviedb.org/3/search/movie?api_key=" +
+    key +
+    "&" +
+    inputValue;
+  console.log(url);
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {

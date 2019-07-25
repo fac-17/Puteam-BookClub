@@ -41,8 +41,9 @@ const handlePublic = (request, response, endpoint) => {
 };
 
 const handleCall = (request, response, endpoint) => {
-  console.log("This is Endpoint:", endpoint);
-  query.apiCall(endpoint);
+  parsedEnd = endpoint.substring(1, endpoint.length);
+
+  query.apiCall(parsedEnd);
   // filterResults(movieObj);
 };
 
