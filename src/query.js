@@ -3,10 +3,7 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 var searchInput = "lion"; //placeholder
 
-// var key = process.env.API_KEY;
-
-
-
+var key = process.env.API_KEY;
 
 function apiCall(searchInput) {
   var url =
@@ -25,4 +22,4 @@ function apiCall(searchInput) {
   xhr.send();
 }
 
-apiCall(searchInput)
+apiCall(searchInput);
