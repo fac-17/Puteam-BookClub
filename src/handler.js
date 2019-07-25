@@ -47,4 +47,4 @@ const filterResults = movieObj => {
   return titles;
 };
 
-module.exports = { handleHome, handlePublic };
+module.exports = { handleHome, handlePublic, filterResults };
