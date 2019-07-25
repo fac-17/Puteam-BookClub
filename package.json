@@ -4,7 +4,7 @@
   "description": "A search engine for book reviews",
   "main": "test.js",
   "scripts": {
-    "test": "node test.js | tap-spec"
+    "test": "node src/test.js | tap-spec"
   },
   "repository": {
     "type": "git",
