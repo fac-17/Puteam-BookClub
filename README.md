@@ -8,6 +8,8 @@ We want to improve the user experience of movie lovers by suggesting movies they
 
 We intend to query an API and use the results to populate a dropdown list.
 
+![](https://media.giphy.com/media/l0ErRtQDgjMtQcjsI/giphy.gif)
+
 ## Installation Guide
 
 Our app is hosted on Heroku:
@@ -69,11 +71,10 @@ The user should be able to:
 
 ## Stretch Goals
 
+- [ ] Show the movie synopsis
 - [ ] Only show most relevant suggestions in list
 - [ ] Highlight on Hover
 - [ ] Highlight difference between list items
-
-## Stretch Goals
 
 ## Problems We Had
 
@@ -87,3 +88,4 @@ The user should be able to:
 - How to use an API call to take a string from the search-input and pass it to the back end
 - How to set up the server, router and check endpoints
 - Modularising code
+- File structure
