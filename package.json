@@ -7,8 +7,12 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
   "scripts": {
+    "go" : "nodemon src/server.js",
+    "start": "node src/server.js",
     "test": "node src/test.js | tap-spec"
   },
   "repository": {

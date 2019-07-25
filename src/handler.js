@@ -18,15 +18,16 @@ const handleHome = (request, response) => {
 
 const handlePublic = (request, response, endpoint) => {
   const extension = path.extname(endpoint);
-
+  console.log(extension);
+  console.log("This is endpoint:", endpoint);
   const extensionType = {
     ".css": "text/css",
     ".js": "application/javascript",
     ".ico": "image/x-icon"
   };
 
-  const filePath = path.join(__dirname, "..", "public", endpoint);
-
+  const filePath = path.join(__dirname, "..", endpoint);
+  console.log("This is filepath:", filePath);
   fs.readFile(filePath, (error, file) => {
     if (error) {
       response.writeHead(404, { "content-type": "text/html" });
@@ -37,6 +38,8 @@ const handlePublic = (request, response, endpoint) => {
     }
   });
 };
+
+//const handleCall =
 
 const filterResults = movieObj => {
   let movies = movieObj.results;
