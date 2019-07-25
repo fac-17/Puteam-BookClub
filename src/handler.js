@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const query = require("./query.js");
+const querystring = require("querystring")
 
 const handleHome = (request, response) => {
   const filePath = path.join(__dirname, "..", "public", "index.html");
@@ -16,6 +17,8 @@ const handleHome = (request, response) => {
   });
 };
 
+console.log("this is query", query);
+
 const handlePublic = (request, response, endpoint) => {
   const extension = path.extname(endpoint);
   console.log(extension);
@@ -23,7 +26,8 @@ const handlePublic = (request, response, endpoint) => {
   const extensionType = {
     ".css": "text/css",
     ".js": "application/javascript",
-    ".ico": "image/x-icon"
+    ".ico": "image/x-icon",
+    ".png": "image/png"
   };
 
   const filePath = path.join(__dirname, "..", endpoint);
@@ -39,10 +43,15 @@ const handlePublic = (request, response, endpoint) => {
   });
 };
 
-//const handleCall = 
+const handleCall = (request, response, endpoint) => {
+  let parsedEndpoint = querystring.parse(endpoint);
+  console.log("this is endpoint: ", parsedEndpoint);
+  // apiCall(input.value);
+  // filterResults(movieObj);
+}
 
-const filterResults = movieObj => {
-  let movies = movieObj.results;
+const filterResults = Obj => {
+  let movies = Obj.results;
   let titles = [];
   for (i = 0; i < 5; i++) {
     titles.push(movies.title);
@@ -50,4 +59,4 @@ const filterResults = movieObj => {
   return titles;
 };
 
-module.exports = { handleHome, handlePublic, filterResults };
+module.exports = { handleHome, handlePublic, filterResults, handleCall};

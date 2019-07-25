@@ -1,8 +1,10 @@
-let input = document.querySelector(".form--input");
+// let input = document.querySelector(".form--input").value;
 let xhr = new XMLHttpRequest();
-let url = `search=${input.value}`;
+// let url = `search=${input}`;
 
-const frontCall = () => {
+const frontCall = (searchInput) => {
+ var url = `search=${searchInput}`;
+ console.log('search input: ', searchInput);
 xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
     let frontObj = JSON.parse(xhr.responseText);
@@ -13,6 +15,5 @@ xhr.onreadystatechange = () => {
   }
   xhr.open("GET", url, true);
   xhr.send();
-  console.log("hey");
 
 };
