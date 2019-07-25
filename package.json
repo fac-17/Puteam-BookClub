@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "A search engine for book reviews",
   "main": "test.js",
+  "dependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "node src/test.js | tap-spec"
   },
@@ -16,12 +21,5 @@
   "bugs": {
     "url": "https://github.com/fac-17/Puteam-BookClub/issues"
   },
-  "homepage": "https://github.com/fac-17/Puteam-BookClub#readme",
-  "devDependencies": {
-    "tap-spec": "^5.0.0",
-    "tape": "^4.11.0"
-  },
-  "dependencies": {
-    "xmlhttprequest": "^1.8.0"
-  }
+  "homepage": "https://github.com/fac-17/Puteam-BookClub#readme"
 }
