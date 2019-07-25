@@ -1,0 +1,25 @@
+{
+  "name": "Puteam-BookClub",
+  "version": "1.0.0",
+  "description": "A search engine for book reviews",
+  "main": "test.js",
+  "dependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-17/Puteam-BookClub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-17/Puteam-BookClub/issues"
+  },
+  "homepage": "https://github.com/fac-17/Puteam-BookClub#readme"
+}
