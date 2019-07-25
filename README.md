@@ -1,2 +1,2 @@
 # Puteam's Movie Club
-A search engine for movie reviews
+A search engine for movie synopsis' 
