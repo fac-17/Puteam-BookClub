@@ -3,14 +3,14 @@
 
 let searchInput = "lion"; //placeholder
 
-//let key = process.env.API_KEY;
+let key = process.env.API_KEY;
 
 function apiCall() {
   var xhr = new XMLHttpRequest();
 
   var url =
     "https://api.themoviedb.org/3/search/movie?api_key=" +
-    "3a9c38adfc4ba4d10d8d9b90443f949d" +
+    key +
     "&query=" +
     searchInput;
 
