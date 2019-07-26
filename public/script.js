@@ -21,7 +21,13 @@ const autoContainer = document.querySelector(".autocomplete");
 const autoContainerItems = document.querySelector(".autocomplete-items");
 
 const populateChoices = function() {
+
+  while (autoContainer.firstChild) {
+    autoContainer.removeChild(autoContainer.firstChild);
+  }
+
   for (let i = 0; i < choices.length; i++) {
+
     var newChoice = document.createElement("div");
     newChoice.textContent = choices[i];
     newChoice.className = "autocomplete-items";
