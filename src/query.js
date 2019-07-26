@@ -1,10 +1,11 @@
+const env = require("env2")("./path-to-your/.env");
 // let script = require("../public/script.js");
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-// var key = process.env.API_KEY;
+var key = process.env.API_KEY;
 
-var key = "3a9c38adfc4ba4d10d8d9b90443f949d";
+// var key = "3a9c38adfc4ba4d10d8d9b90443f949d";
 
 let movieObj = {};
 
