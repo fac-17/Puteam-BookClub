@@ -30,11 +30,16 @@ h1 {
   height: 40px;
   border-radius: 20px;
   border: 2px black solid;
+  padding-left: 10px;
   font-family: 'Limelight', cursive;
   font-size: 1em;
   background-color: #d9d1c7;
 
   margin: 0px auto 20px auto;
+}
+
+.form--input:active {
+  outline: 0; /* avoids blue shadow when clicking on button */
 }
 
 
@@ -74,6 +79,8 @@ h1 {
   font-family: 'Limelight', cursive;
   font-size: 1em;
   background-color: #d9d1c7;
+  color: #2f2323;
   cursor: pointer;
 
+  text-decoration: none;
 }
