@@ -1,5 +1,5 @@
 // Event trigers on key input
-document.querySelector(".form--input").addEventListener("keydown", function(e) {
+document.querySelector(".form--input").addEventListener("keyup", function(e) {
   var searchInput = document.querySelector(".form--input").value;
   console.log(searchInput);
   frontCall(searchInput);
@@ -12,17 +12,14 @@ document.querySelector(".form").addEventListener("submit", function(e) {
   apiCall(searchInput);
 });
 
-
 // TEMPORARY FUNCTION TO POPULATE SUGESTIONS LIST
-const tempChoices = ['ajllo', 'ajck', 'ajie', 'ajfhryg', 'ajdiauwfherufh']
+const tempChoices = ["ajllo", "ajck", "ajie", "ajfhryg", "ajdiauwfherufh"];
 const autoContainer = document.querySelector(".autocomplete");
 const autoContainerItems = document.querySelector(".autocomplete-items");
 
-for (let i=0; i<tempChoices.length; i++) {
-
-  var newChoice = document.createElement('div')
+for (let i = 0; i < tempChoices.length; i++) {
+  var newChoice = document.createElement("div");
   newChoice.textContent = tempChoices[i];
-  newChoice.className = 'autocomplete-items'
+  newChoice.className = "autocomplete-items";
   autoContainer.appendChild(newChoice);
-
 }

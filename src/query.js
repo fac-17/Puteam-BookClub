@@ -2,9 +2,11 @@
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-var searchInput = "lion"; //placeholder
+// var key = process.env.API_KEY;
 
-var key = process.env.API_KEY;
+var key = "3a9c38adfc4ba4d10d8d9b90443f949d";
+
+let movieObj = {};
 
 function apiCall(inputValue) {
   var url =
@@ -16,12 +18,15 @@ function apiCall(inputValue) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      let movieObj = JSON.parse(xhr.responseText);
-      console.log("This is req:", movieObj);
+      movieObj = JSON.parse(xhr.responseText);
+      return movieObj;
     }
   };
-  xhr.open("GET", url, true);
+  xhr.open("GET", url, false);
   xhr.send();
+  if (movieObj.results) {
+    return movieObj;
+  }
 }
 
 module.exports = { apiCall };
