@@ -45,8 +45,6 @@ const handleCall = (request, response, endpoint) => {
   var filtered = filterResults(unfiltered);
   response.writeHead(200, { 'content-type': 'application/json' });
   response.end(JSON.stringify(filtered));
-
-  console.log("Filtered results: ", filtered);
 };
 
 const filterResults = Obj => {

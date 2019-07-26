@@ -2,17 +2,20 @@
 let xhr = new XMLHttpRequest();
 // let url = `search=${input}`;
 
+var filteredResponse;
+
 const frontCall = searchInput => {
   var url = `query=${searchInput}`;
   xhr.onreadystatechange = () => {
     // console.log('readyState: ', xhr.readyState, 'status: ', xhr.status);
     if (xhr.readyState == 4 && xhr.status == 200) {
-      var filteredResponse = JSON.parse(xhr.responseText);
-      console.log('Calls come home: ', filteredResponse);
+      filteredResponse = JSON.parse(xhr.responseText);
     } else {
       console.error(xhr.responseText);
     }
+    return filteredResponse;
   };
   xhr.open("GET", url, true);
   xhr.send();
+  return filteredResponse;
 };
