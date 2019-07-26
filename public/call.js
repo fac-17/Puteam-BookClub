@@ -4,10 +4,11 @@ let xhr = new XMLHttpRequest();
 
 const frontCall = searchInput => {
   var url = `query=${searchInput}`;
-  console.log("search input: ", searchInput);
   xhr.onreadystatechange = () => {
+    // console.log('readyState: ', xhr.readyState, 'status: ', xhr.status);
     if (xhr.readyState == 4 && xhr.status == 200) {
-      let frontObj = JSON.parse(xhr.responseText);
+      var filteredResponse = JSON.parse(xhr.responseText);
+      console.log('Calls come home: ', filteredResponse);
     } else {
       console.error(xhr.responseText);
     }

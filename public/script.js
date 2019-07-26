@@ -1,7 +1,6 @@
 // Event trigers on key input
 document.querySelector(".form--input").addEventListener("keyup", function(e) {
   var searchInput = document.querySelector(".form--input").value;
-  console.log(searchInput);
   frontCall(searchInput);
 });
 
