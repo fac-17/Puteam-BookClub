@@ -17,7 +17,6 @@ const handleHome = (request, response) => {
   });
 };
 
-console.log("this is query", query);
 
 const handlePublic = (request, response, endpoint) => {
   const extension = path.extname(endpoint);
@@ -42,11 +41,10 @@ const handlePublic = (request, response, endpoint) => {
 
 const handleCall = (request, response, endpoint) => {
   parsedEnd = endpoint.substring(1, endpoint.length);
-  query.apiCall(parsedEnd);
-  // let titles = query.apiCall(parsedEnd);
-  // titles = filterResults(titles);
-  console.log("result: ", query.apiCall(parsedEnd));
-  console.log(query.movieObj2);
+  var unfiltered = query.apiCall(parsedEnd);
+  var filtered = filterResults(unfiltered);
+  response.writeHead(200, { 'content-type': 'application/json' });
+  response.end(JSON.stringify(filtered));
 };
 
 const filterResults = Obj => {
