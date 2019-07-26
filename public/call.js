@@ -15,7 +15,7 @@ const frontCall = searchInput => {
     }
     return filteredResponse;
   };
-  xhr.open("GET", url, true);
+  xhr.open("GET", url, false);
   xhr.send();
   return filteredResponse;
 };

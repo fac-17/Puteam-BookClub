@@ -1,7 +1,10 @@
+var choices = [];
+
 // Event trigers on key input
 document.querySelector(".form--input").addEventListener("keyup", function(e) {
   var searchInput = document.querySelector(".form--input").value;
-  frontCall(searchInput);
+  choices = frontCall(searchInput);
+  populateChoices();
 });
 
 // Event triggers on form submit
@@ -12,13 +15,16 @@ document.querySelector(".form").addEventListener("submit", function(e) {
 });
 
 // TEMPORARY FUNCTION TO POPULATE SUGESTIONS LIST
-const tempChoices = ["ajllo", "ajck", "ajie", "ajfhryg", "ajdiauwfherufh"];
+ // ["ajllo", "ajck", "ajie", "ajfhryg", "ajdiauwfherufh"];
+
 const autoContainer = document.querySelector(".autocomplete");
 const autoContainerItems = document.querySelector(".autocomplete-items");
 
-for (let i = 0; i < tempChoices.length; i++) {
-  var newChoice = document.createElement("div");
-  newChoice.textContent = tempChoices[i];
-  newChoice.className = "autocomplete-items";
-  autoContainer.appendChild(newChoice);
+const populateChoices = function() {
+  for (let i = 0; i < choices.length; i++) {
+    var newChoice = document.createElement("div");
+    newChoice.textContent = choices[i];
+    newChoice.className = "autocomplete-items";
+    autoContainer.appendChild(newChoice);
+  }
 }
