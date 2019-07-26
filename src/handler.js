@@ -42,16 +42,18 @@ const handlePublic = (request, response, endpoint) => {
 
 const handleCall = (request, response, endpoint) => {
   parsedEnd = endpoint.substring(1, endpoint.length);
-
   query.apiCall(parsedEnd);
-  // filterResults(movieObj);
+  // let titles = query.apiCall(parsedEnd);
+  // titles = filterResults(titles);
+  console.log("result: ", query.apiCall(parsedEnd));
+  console.log(query.movieObj2);
 };
 
 const filterResults = Obj => {
   let movies = Obj.results;
   let titles = [];
   for (i = 0; i < 5; i++) {
-    titles.push(movies.title);
+    titles.push(movies[i].title);
   }
   return titles;
 };
