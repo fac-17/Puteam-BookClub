@@ -28,9 +28,11 @@ const populateChoices = function() {
 
   for (let i = 0; i < choices.length; i++) {
 
-    var newChoice = document.createElement("div");
+    var newChoice = document.createElement("a");
     newChoice.textContent = choices[i];
     newChoice.className = "autocomplete-items";
+    newChoice.setAttribute("href", "http://www.lolonline.ca/image/cache/data/Screen%20Shot%202012-08-03%20at%2010.55.10%20AM-750x750.png");
+    newChoice.setAttribute("target", "blank");
     autoContainer.appendChild(newChoice);
   }
 }
